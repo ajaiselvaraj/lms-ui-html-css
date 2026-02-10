@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - LMS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="app-sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>EduLearn</span>
+            </div>
+
+            <nav class="nav-links">
+                <a href="dashboard.html" class="nav-item active">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="courses.html" class="nav-item">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>My Courses</span>
+                </a>
+                <a href="assignments.html" class="nav-item">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Assignments</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="index.html" class="nav-item" style="margin-top: auto;">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-left">
+                <h2 class="text-xl font-bold">Dashboard</h2>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" class="input" placeholder="Search courses, assignments...">
+            </div>
+
+            <div class="user-menu">
+                <button class="btn btn-outline btn-sm">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+                <div class="avatar">DA</div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Section -->
+            <div class="section mb-4">
+                <h1 class="text-2xl font-bold mb-4">Welcome back, David! 👋</h1>
+
+                <!-- Stats Grid -->
+                <div class="grid-cards"
+                    style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 2rem;">
+                    <div class="card">
+                        <div class="text-muted text-sm mb-4">Courses in Progress</div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold">4</span>
+                            <div class="text-primary"><i class="fa-solid fa-book"></i></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="text-muted text-sm mb-4">Completed Courses</div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold">12</span>
+                            <div class="text-success"><i class="fa-solid fa-check-circle"></i></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="text-muted text-sm mb-4">Assignments Due</div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold">3</span>
+                            <div class="text-warning"><i class="fa-solid fa-clock"></i></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="text-muted text-sm mb-4">Total Points</div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold">1,450</span>
+                            <div class="text-secondary"><i class="fa-solid fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-4" style="flex-wrap: wrap;">
+                <!-- Recent Courses -->
+                <div style="flex: 2; min-width: 300px;">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold">Continue Learning</h3>
+                        <a href="courses.html" class="text-primary text-sm font-medium">View All</a>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <div class="card flex items-center gap-4">
+                            <div
+                                style="width: 60px; height: 60px; background-color: #e0e7ff; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                💻</div>
+                            <div style="flex: 1;">
+                                <h4 class="font-bold mb-4">Web Development Bootcamp</h4>
+                                <div class="flex justify-between text-sm text-muted mb-4">
+                                    <span>Module 5/12</span>
+                                    <span>42%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 42%;"></div>
+                                </div>
+                            </div>
+                            <a href="course-detail.html" class="btn btn-primary btn-sm">Continue</a>
+                        </div>
+
+                        <div class="card flex items-center gap-4">
+                            <div
+                                style="width: 60px; height: 60px; background-color: #fce7f3; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                🎨</div>
+                            <div style="flex: 1;">
+                                <h4 class="font-bold mb-4">UI/UX Design Fundamentals</h4>
+                                <div class="flex justify-between text-sm text-muted mb-4">
+                                    <span>Module 2/8</span>
+                                    <span>25%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 25%;"></div>
+                                </div>
+                            </div>
+                            <a href="course-detail.html" class="btn btn-primary btn-sm">Continue</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Tasks -->
+                <div style="flex: 1; min-width: 300px;">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold">Upcoming Due</h3>
+                        <a href="assignments.html" class="text-primary text-sm font-medium">View All</a>
+                    </div>
+
+                    <div class="card">
+                        <ul class="flex flex-col gap-4">
+                            <li class="flex gap-4 items-start pb-4 border-b border-gray-100">
+                                <div
+                                    style="background: #fee2e2; color: #991b1b; padding: 4px 8px; border-radius: 4px; font-weight: bold; text-align: center; min-width: 50px;">
+                                    <div class="text-xs">FEB</div>
+                                    <div class="text-lg">12</div>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-sm">JavaScript Quiz</h5>
+                                    <div class="text-xs text-muted">Web Development • 11:59 PM</div>
+                                </div>
+                            </li>
+                            <li class="flex gap-4 items-start pb-4 border-b border-gray-100">
+                                <div
+                                    style="background: #fef3c7; color: #92400e; padding: 4px 8px; border-radius: 4px; font-weight: bold; text-align: center; min-width: 50px;">
+                                    <div class="text-xs">FEB</div>
+                                    <div class="text-lg">15</div>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-sm">Wireframe Submission</h5>
+                                    <div class="text-xs text-muted">UI/UX Design • 5:00 PM</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

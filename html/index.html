@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LMS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            background-color: #f3f4f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-header i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-card">
+        <div class="login-header">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h1 class="text-2xl font-bold">Welcome to EduLearn</h1>
+            <p class="text-muted">Sign in to continue your learning journey</p>
+        </div>
+
+        <form action="dashboard.html" onsubmit="window.location.href='dashboard.html'; return false;">
+            <div class="mb-4">
+                <label class="block text-sm font-medium mb-1">Email Address</label>
+                <input type="email" class="input" placeholder="you@example.com" value="student@edulearn.com" required>
+            </div>
+
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <label class="block text-sm font-medium">Password</label>
+                    <a href="#" class="text-xs text-primary">Forgot password?</a>
+                </div>
+                <input type="password" class="input" value="password123" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-full" style="width: 100%;">Sign In</button>
+        </form>
+
+        <div class="mt-4 text-center text-sm text-muted">
+            Don't have an account? <a href="#" class="text-primary font-bold">Sign up</a>
+        </div>
+    </div>
+</body>
+
+</html>

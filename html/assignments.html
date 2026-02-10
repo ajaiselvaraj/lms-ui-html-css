@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments - LMS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="app-sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>EduLearn</span>
+            </div>
+
+            <nav class="nav-links">
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="courses.html" class="nav-item">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>My Courses</span>
+                </a>
+                <a href="assignments.html" class="nav-item active">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Assignments</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="index.html" class="nav-item" style="margin-top: auto;">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Header -->
+        <header class="app-header">
+            <h2 class="text-xl font-bold">Assignments</h2>
+            <div class="user-menu">
+                <div class="avatar">DA</div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Filters -->
+            <div class="flex justify-between items-center mb-6">
+                <div class="flex gap-2">
+                    <span class="badge badge-primary"
+                        style="font-size: 1rem; padding: 0.5rem 1rem; cursor: pointer;">Pending (3)</span>
+                    <span class="badge"
+                        style="font-size: 1rem; padding: 0.5rem 1rem; cursor: pointer; background: transparent; border: 1px solid var(--border);">Submitted</span>
+                    <span class="badge"
+                        style="font-size: 1rem; padding: 0.5rem 1rem; cursor: pointer; background: transparent; border: 1px solid var(--border);">Graded</span>
+                </div>
+            </div>
+
+            <!-- Assignments List -->
+            <div class="card p-0" style="padding: 0;">
+                <table style="width: 100%;">
+                    <thead>
+                        <tr style="background-color: #f9fafb;">
+                            <th style="padding: 1rem;">Assignment Name</th>
+                            <th style="padding: 1rem;">Course</th>
+                            <th style="padding: 1rem;">Due Date</th>
+                            <th style="padding: 1rem;">Status</th>
+                            <th style="padding: 1rem;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="font-bold">JavaScript Quiz: DOM Manipulation</div>
+                            </td>
+                            <td class="text-muted">Web Development Bootcamp</td>
+                            <td class="text-danger font-medium">Feb 12, 11:59 PM</td>
+                            <td><span class="badge badge-warning">Pending</span></td>
+                            <td><button class="btn btn-primary btn-sm">Start</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="font-bold">Wireframe Submission</div>
+                                <div class="text-xs text-muted">Upload PDF or Figma Link</div>
+                            </td>
+                            <td class="text-muted">UI/UX Design Masterclass</td>
+                            <td class="text-warning font-medium">Feb 15, 5:00 PM</td>
+                            <td><span class="badge badge-warning">Pending</span></td>
+                            <td><button class="btn btn-outline btn-sm">Submit</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="font-bold">React Components Practice</div>
+                            </td>
+                            <td class="text-muted">Web Development Bootcamp</td>
+                            <td class="text-muted">Feb 20, 11:59 PM</td>
+                            <td><span class="badge badge-warning">Pending</span></td>
+                            <td><button class="btn btn-outline btn-sm">Submit</button></td>
+                        </tr>
+                        <!-- Submitted/Graded examples (if tabs were working) -->
+                        <tr style="opacity: 0.6;">
+                            <td>
+                                <div class="font-bold">HTML5 Semantics Essay</div>
+                            </td>
+                            <td class="text-muted">Web Development Bootcamp</td>
+                            <td class="text-muted">Jan 28, 11:59 PM</td>
+                            <td><span class="badge badge-success">Graded: 95/100</span></td>
+                            <td><button class="btn btn-outline btn-sm">View Feedback</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>
