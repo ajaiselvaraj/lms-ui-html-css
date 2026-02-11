@@ -137,19 +137,83 @@
 
 @media (max-width: 768px) {
 
-    /* Mobile */
+    /* Mobile - Bottom Navigation Layout */
     .app-container {
         display: flex;
         flex-direction: column;
-        height: auto;
-    }
-
-    .app-sidebar {
-        display: none;
-        /* Hide sidebar on mobile for now, or implement hamburger menu */
+        height: 100vh;
+        /* Full viewport height */
+        overflow: hidden;
+        /* Prevent body scroll, handle in main-content */
     }
 
     .app-header {
+        flex: 0 0 60px;
+        /* Fixed height header */
+        position: sticky;
+        top: 0;
+        padding: 0 1rem;
+        /* Smaller padding */
+    }
+
+    .app-sidebar {
+        display: flex;
+        order: 3;
+        /* Move to bottom */
+        flex: 0 0 60px;
+        /* Fixed height bottom bar */
+        flex-direction: row;
+        padding: 0;
         position: static;
+        /* Part of flex flow */
+        height: auto;
+        border-right: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        justify-content: center;
+    }
+
+    .brand {
+        display: none;
+        /* Hide logo in bottom nav */
+    }
+
+    .nav-links {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+    }
+
+    .nav-item {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.5rem;
+        gap: 4px;
+        font-size: 0.7rem;
+        border-radius: 0;
+        background: transparent !important;
+    }
+
+    .nav-item:hover {
+        background: transparent;
+        color: white;
+    }
+
+    .nav-item i {
+        font-size: 1.25rem;
+    }
+
+    .main-content {
+        flex: 1;
+        /* Take remaining space */
+        order: 2;
+        overflow-y: auto;
+        padding: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .hidden-mobile {
+        display: none !important;
     }
 }

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - University LMS</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="app-sidebar">
+            <div class="brand">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>UniLMS</span>
+            </div>
+
+            <nav class="nav-links">
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="courses.html" class="nav-item">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>My Courses</span>
+                </a>
+                <a href="assignments.html" class="nav-item">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Assignments</span>
+                </a>
+                <a href="profile.html" class="nav-item active">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="index.html" class="nav-item" style="margin-top: auto;">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Header -->
+        <header class="app-header">
+            <h2 class="font-bold text-lg">My Profile</h2>
+
+            <div class="user-profile">
+                <div class="text-right hidden-mobile">
+                    <div class="font-bold text-sm">David Anderson</div>
+                    <div class="text-xs text-muted">Computer Science • Year 3</div>
+                </div>
+                <div class="user-avatar">DA</div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <div class="profile-container">
+
+                <!-- Left: Profile Card -->
+                <div class="profile-card-container">
+                    <div class="profile-avatar-large">DA</div>
+                    <h2 class="profile-name">David Anderson</h2>
+                    <p class="profile-meta">Student ID: 2023CS101</p>
+                    <p class="profile-meta">B.Sc. Computer Science • Year 3</p>
+
+                    <button class="btn btn-primary w-full mb-2">Edit Profile</button>
+                    <button class="btn btn-outline w-full">Change Password</button>
+
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <div class="stat-value">3.8</div>
+                            <div class="stat-label">CGPA</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">92%</div>
+                            <div class="stat-label">Attendance</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">12</div>
+                            <div class="stat-label">Courses</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">4</div>
+                            <div class="stat-label">Semesters</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Details Form -->
+                <div class="profile-details-container">
+
+                    <h3 class="form-section-title">Personal Information</h3>
+
+                    <form>
+                        <div class="form-grid mb-4">
+                            <div class="form-group">
+                                <label class="label">First Name</label>
+                                <input type="text" class="input" value="David" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">Last Name</label>
+                                <input type="text" class="input" value="Anderson" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">Email Address</label>
+                                <input type="email" class="input" value="david.anderson@university.edu" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">Phone Number</label>
+                                <input type="tel" class="input" value="+1 (555) 123-4567" readonly>
+                            </div>
+                            <div class="form-group col-span-2">
+                                <label class="label">Address</label>
+                                <input type="text" class="input" value="123 University Ave, Student Dorms B, Room 402"
+                                    readonly>
+                            </div>
+                        </div>
+
+                        <h3 class="form-section-title" style="margin-top: 2rem;">Preferences</h3>
+
+                        <div class="form-group"
+                            style="display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 0;">
+                            <div>
+                                <div class="font-medium">Email Notifications</div>
+                                <div class="text-xs text-muted">Receive updates about assignments and grades</div>
+                            </div>
+                            <input type="checkbox" checked style="width: 20px; height: 20px;">
+                        </div>
+
+                        <div class="form-group"
+                            style="display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 0;">
+                            <div>
+                                <div class="font-medium">Public Profile</div>
+                                <div class="text-xs text-muted">Allow other students to see your profile</div>
+                            </div>
+                            <input type="checkbox" style="width: 20px; height: 20px;">
+                        </div>
+
+                        <div class="mt-4 text-right">
+                            <button type="button" class="btn btn-primary" onclick="alert('Profile Saved!')">Save
+                                Changes</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>
