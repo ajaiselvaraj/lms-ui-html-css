@@ -1,0 +1,65 @@
+/* --- main.css: Variables, Reset, Typography --- */
+
+:root {
+    /* Theme Colors */
+    --primary: #4f46e5;       /* Indigo-600 */
+    --primary-hover: #4338ca; /* Indigo-700 */
+    --secondary: #ec4899;     /* Pink-500 */
+    --bg-body: #f3f4f6;       /* Gray-100 */
+    --bg-surface: #ffffff;    /* White */
+    --text-main: #111827;     /* Gray-900 */
+    --text-muted: #6b7280;    /* Gray-500 */
+    --border-color: #e5e7eb;  /* Gray-200 */
+
+    /* Status Colors */
+    --status-success: #10b981;
+    --status-warning: #f59e0b;
+    --status-danger: #ef4444;
+
+    /* Spacing & Sizing */
+    --radius-md: 0.5rem;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    
+    /* Typography */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mt-4 { margin-top: 1rem; }
+.w-full { width: 100%; }
+
+.text-primary { color: var(--primary); }
+.text-muted { color: var(--text-muted); }
+.font-bold { font-weight: 700; }
+.font-medium { font-weight: 500; }
+.text-sm { font-size: 0.875rem; }
