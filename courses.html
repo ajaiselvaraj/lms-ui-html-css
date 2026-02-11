@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses - University LMS</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/courses.css"> <!-- New CSS file -->
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar (Consistent) -->
+        <aside class="app-sidebar">
+            <div class="brand">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>UniLMS</span>
+            </div>
+
+            <nav class="nav-links">
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="courses.html" class="nav-item active">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>My Courses</span>
+                </a>
+                <a href="assignments.html" class="nav-item">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Assignments</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="index.html" class="nav-item" style="margin-top: auto;">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Header (Consistent) -->
+        <header class="app-header">
+            <h2 class="font-bold text-lg">My Courses</h2>
+
+            <div class="user-profile">
+                <!-- Search Bar for Courses -->
+                <div style="margin-right: auto; margin-left: 2rem; position: relative; width: 300px;"
+                    class="hidden-mobile">
+                    <i class="fa-solid fa-search"
+                        style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+                    <input type="text" class="input" placeholder="Search courses..." style="padding-left: 2.5rem;">
+                </div>
+
+                <div class="text-right hidden-mobile">
+                    <div class="font-bold text-sm">David Anderson</div>
+                    <div class="text-xs text-muted">Computer Science • Year 3</div>
+                </div>
+                <div class="user-avatar">DA</div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Filters -->
+            <div class="mb-4 flex justify-between items-center"
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <div style="display: flex; gap: 1rem;">
+                    <button class="btn btn-primary btn-sm">All Courses</button>
+                    <button class="btn btn-outline btn-sm"
+                        style="background: white; border: 1px solid var(--border-color);">Active</button>
+                    <button class="btn btn-outline btn-sm"
+                        style="background: white; border: 1px solid var(--border-color);">Completed</button>
+                </div>
+
+                <div class="text-sm text-muted">
+                    Showing <strong>4</strong> courses
+                </div>
+            </div>
+
+            <!-- Course Grid -->
+            <div class="course-grid">
+
+                <!-- Course 1 -->
+                <a href="course-detail.html" class="course-card">
+                    <div class="course-thumbnail">
+                        <!-- Placeholder Image (Solid Color for no-image requirement, or use unsplash link if allowed) -->
+                        <div
+                            style="width: 100%; height: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-code text-white" style="font-size: 3rem; opacity: 0.5;"></i>
+                        </div>
+                        <span class="course-status status-active">Active</span>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-code">CS301</div>
+                        <h3 class="course-title">Data Structures & Algorithms</h3>
+
+                        <div class="mb-4 mt-4">
+                            <div class="flex justify-between text-xs text-muted mb-1"
+                                style="display: flex; justify-content: space-between;">
+                                <span>Progress</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="instructor">
+                            <div class="instructor-avatar" style="background-color: #ddd;"></div>
+                            <span>Prof. Sarah Smith</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Course 2 -->
+                <a href="course-detail.html" class="course-card">
+                    <div class="course-thumbnail">
+                        <div
+                            style="width: 100%; height: 100%; background: linear-gradient(135deg, #2af598 0%, #009efd 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-database text-white" style="font-size: 3rem; opacity: 0.5;"></i>
+                        </div>
+                        <span class="course-status status-active">Active</span>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-code">CS305</div>
+                        <h3 class="course-title">Database Management Systems</h3>
+
+                        <div class="mb-4 mt-4">
+                            <div class="flex justify-between text-xs text-muted mb-1"
+                                style="display: flex; justify-content: space-between;">
+                                <span>Progress</span>
+                                <span>42%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 42%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="instructor">
+                            <div class="instructor-avatar" style="background-color: #ddd;"></div>
+                            <span>Dr. Mark Johnson</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Course 3 -->
+                <a href="course-detail.html" class="course-card">
+                    <div class="course-thumbnail">
+                        <div
+                            style="width: 100%; height: 100%; background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-laptop-code text-white" style="font-size: 3rem; opacity: 0.5;"></i>
+                        </div>
+                        <span class="course-status status-completed">Completed</span>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-code">CS202</div>
+                        <h3 class="course-title">Web Development Fundamentals</h3>
+
+                        <div class="mb-4 mt-4">
+                            <div class="flex justify-between text-xs text-muted mb-1"
+                                style="display: flex; justify-content: space-between;">
+                                <span>Grade</span>
+                                <span class="text-success font-bold">A</span>
+                            </div>
+                            <!-- Completed line -->
+                            <div
+                                style="width: 100%; height: 4px; background-color: var(--success); border-radius: 2px;">
+                            </div>
+                        </div>
+
+                        <div class="instructor">
+                            <div class="instructor-avatar" style="background-color: #ddd;"></div>
+                            <span>Prof. Alan Turing</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Course 4 -->
+                <a href="course-detail.html" class="course-card">
+                    <div class="course-thumbnail">
+                        <div
+                            style="width: 100%; height: 100%; background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-layer-group text-white" style="font-size: 3rem; opacity: 0.5;"></i>
+                        </div>
+                        <span class="course-status status-active">Active</span>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-code">CS310</div>
+                        <h3 class="course-title">Software Engineering Principles</h3>
+
+                        <div class="mb-4 mt-4">
+                            <div class="flex justify-between text-xs text-muted mb-1"
+                                style="display: flex; justify-content: space-between;">
+                                <span>Progress</span>
+                                <span>15%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="instructor">
+                            <div class="instructor-avatar" style="background-color: #ddd;"></div>
+                            <span>Dr. Grace Hopper</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>
