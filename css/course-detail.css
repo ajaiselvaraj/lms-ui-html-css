@@ -1,0 +1,181 @@
+/* --- course-detail.css: Specific styles for course detail page --- */
+
+.course-detail-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 2rem;
+    height: calc(100vh - 104px);
+    /* Adjust based on header/padding */
+    overflow: hidden;
+}
+
+/* Left Column: Course Navigation / Syllabus */
+.course-nav {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+}
+
+.course-nav-header {
+    padding: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #f8fafc;
+}
+
+.module-list {
+    overflow-y: auto;
+    flex: 1;
+}
+
+.module-item {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.module-header {
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: #fca5a5;
+    /* Fallback */
+    background-color: var(--bg-body);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.module-header:hover {
+    background-color: #e2e8f0;
+}
+
+.lesson-list {
+    display: none;
+    /* JS would toggle this, for CSS only we'll show active one */
+}
+
+.module-item.active .lesson-list {
+    display: block;
+}
+
+.lesson-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+    background-color: var(--bg-surface);
+    transition: all 0.2s;
+}
+
+.lesson-item:hover {
+    background-color: #f1f5f9;
+}
+
+.lesson-item.active-lesson {
+    background-color: #eef2ff;
+    border-left-color: var(--primary);
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.lesson-status {
+    margin-left: auto;
+}
+
+/* Right Column: Content Area */
+.course-content-area {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow-y: auto;
+    padding-right: 1rem;
+    /* Space for scrollbar */
+}
+
+.video-placeholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #000;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: var(--shadow-md);
+}
+
+.play-button {
+    width: 64px;
+    height: 64px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tab-nav {
+    display: flex;
+    gap: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+
+.tab-item {
+    padding-bottom: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+}
+
+.tab-item.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.instructor-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: #f8fafc;
+    border-radius: var(--radius-md);
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .course-detail-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow: visible;
+    }
+
+    .course-nav {
+        order: 2;
+        /* Move below video on smaller screens */
+        height: auto;
+    }
+
+    .course-content-area {
+        order: 1;
+        overflow: visible;
+        padding-right: 0;
+    }
+}
