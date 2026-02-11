@@ -60,3 +60,9 @@ lms-ui/
 ## 📜 License
 
 This project is for educational purposes.
+
+## 📅 Version History
+
+*   **v2.0** - Final polished UI with accessibility enhancements.
+*   **v1.0** - Core pages and responsive layout implemented.
+
