@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments - University LMS</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/assignments.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="app-sidebar">
+            <div class="brand">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>UniLMS</span>
+            </div>
+
+            <nav class="nav-links">
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="courses.html" class="nav-item">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>My Courses</span>
+                </a>
+                <a href="assignments.html" class="nav-item active">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Assignments</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="index.html" class="nav-item" style="margin-top: auto;">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Header -->
+        <header class="app-header">
+            <h2 class="font-bold text-lg">Assignments</h2>
+
+            <div class="user-profile">
+                <div class="text-right hidden-mobile">
+                    <div class="font-bold text-sm">David Anderson</div>
+                    <div class="text-xs text-muted">Computer Science • Year 3</div>
+                </div>
+                <div class="user-avatar">DA</div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Filters & Actions -->
+            <div class="mb-4 flex justify-between items-center"
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <div style="display: flex; gap: 1rem;">
+                    <button class="btn btn-primary btn-sm">Pending</button>
+                    <button class="btn btn-outline btn-sm">Submitted</button>
+                    <button class="btn btn-outline btn-sm">Graded</button>
+                </div>
+            </div>
+
+            <!-- Assignment List Table -->
+            <div class="assignment-table-container mb-4">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Assignment Name</th>
+                            <th>Course</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Item 1 -->
+                        <tr>
+                            <td>
+                                <div class="font-bold">Project 1: Sorting Algorithms</div>
+                                <div class="text-xs text-muted">Implement Bubble, Merge, and Quick Sort</div>
+                            </td>
+                            <td class="text-muted">CS301: Data Structures</td>
+                            <td class="text-danger font-medium">Feb 15, 11:59 PM</td>
+                            <td>
+                                <span class="badge badge-warning">Pending</span>
+                            </td>
+                            <td>
+                                <button class="btn btn-primary btn-sm"><i class="fa-solid fa-upload mr-1"></i>
+                                    Submit</button>
+                            </td>
+                        </tr>
+
+                        <!-- Item 2 -->
+                        <tr>
+                            <td>
+                                <div class="font-bold">Lab Report 3: SQL Joins</div>
+                                <div class="text-xs text-muted">Complex queries using INNER and LEFT JOIN</div>
+                            </td>
+                            <td class="text-muted">CS305: Database Mgmt</td>
+                            <td class="text-warning font-medium">Feb 18, 5:00 PM</td>
+                            <td>
+                                <span class="badge badge-warning">Pending</span>
+                            </td>
+                            <td>
+                                <button class="btn btn-outline btn-sm">View Instructions</button>
+                            </td>
+                        </tr>
+
+                        <!-- Item 3 -->
+                        <tr>
+                            <td>
+                                <div class="font-bold">Essay: Ethics in AI</div>
+                                <div class="text-xs text-muted">2000 words on bias in machine learning</div>
+                            </td>
+                            <td class="text-muted">CS310: Software Engineering</td>
+                            <td class="text-muted">Feb 10, 11:59 PM</td>
+                            <td>
+                                <span class="badge badge-success">Submitted</span>
+                            </td>
+                            <td>
+                                <button class="btn btn-outline btn-sm" disabled
+                                    style="opacity: 0.6; cursor: not-allowed;">View Submission</button>
+                            </td>
+                        </tr>
+
+                        <!-- Item 4 -->
+                        <tr>
+                            <td>
+                                <div class="font-bold">Quiz 1: HTML5 Basics</div>
+                                <div class="text-xs text-muted">Multiple choice questions</div>
+                            </td>
+                            <td class="text-muted">CS202: Web Development</td>
+                            <td class="text-muted">Jan 25, 10:00 AM</td>
+                            <td>
+                                <span class="badge badge-neutral">Graded: 18/20</span>
+                            </td>
+                            <td>
+                                <button class="btn btn-outline btn-sm">View Feedback</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Submission Area Demo (Visual only) -->
+            <div class="card mt-4">
+                <h3 class="font-bold text-lg mb-2">Submit Assignment: Project 1</h3>
+                <p class="text-muted text-sm mb-4">Allowed file types: .zip, .pdf, .docx (Max 10MB)</p>
+
+                <div class="file-upload-area">
+                    <i class="fa-solid fa-cloud-arrow-up file-upload-icon"></i>
+                    <p class="font-medium">Drag & drop your files here</p>
+                    <p class="text-sm text-muted mb-4">or click to browse</p>
+                    <button class="btn btn-outline btn-sm">Choose Files</button>
+                </div>
+
+                <div class="mt-4 flex justify-end" style="display: flex; justify-content: flex-end; gap: 1rem;">
+                    <button class="btn btn-outline text-muted">Cancel</button>
+                    <button class="btn btn-primary">Submit Assignment</button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

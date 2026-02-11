@@ -1,0 +1,112 @@
+/* --- assignments.css: List view and upload area --- */
+
+.assignment-table-container {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f9fafb;
+    border-bottom: 2px solid var(--border-color);
+}
+
+th {
+    text-align: left;
+    padding: 1rem 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+td {
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+/* Upload Dropzone */
+.file-upload-area {
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    text-align: center;
+    background-color: #f8fafc;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.file-upload-area:hover {
+    border-color: var(--primary);
+    background-color: #eef2ff;
+}
+
+.file-upload-icon {
+    font-size: 2rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+/* Status colors in cells */
+.status-cell {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Modal Simulation (Hidden by default, shown via CSS for demo) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+/* For demo purposes, we won't actually toggle this with JS, 
+   but style it as if it were a component ready to be used. */
+
+.modal-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    width: 100%;
+    max-width: 500px;
+    box-shadow: var(--shadow-md);
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .assignment-table-container {
+        overflow-x: auto;
+    }
+}
